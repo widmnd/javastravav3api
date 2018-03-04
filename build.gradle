@@ -26,3 +26,7 @@ dependencies {
     compile "org.apache.commons:commons-jcs-core:2.1"
 }
 
+processResources{
+    exclude "**/log4j2.xml"
+    exclude "**/log4j.properties"
+}
