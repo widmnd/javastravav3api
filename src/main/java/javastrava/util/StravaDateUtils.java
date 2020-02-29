@@ -14,12 +14,11 @@ public class StravaDateUtils {
 	 *            Date for which seconds since the epoch date is to be calculated
 	 * @return Number of seconds after the unix epoch date equivalent to the given date
 	 */
-	public static Integer secondsSinceUnixEpoch(final LocalDateTime date) {
+	public static Long secondsSinceUnixEpoch(final LocalDateTime date) {
 		if (date == null) {
 			return null;
 		}
-		final Long timeInSeconds = Long.valueOf(date.toEpochSecond(ZoneOffset.UTC));
-		return Integer.valueOf(timeInSeconds.intValue());
+		return date.toEpochSecond(ZoneOffset.UTC);
 	}
 
 }
