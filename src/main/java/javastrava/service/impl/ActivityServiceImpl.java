@@ -867,8 +867,8 @@ public class ActivityServiceImpl extends StravaServiceImpl implements ActivitySe
 	 */
 	@Override
 	public List<StravaActivity> listAuthenticatedAthleteActivities(final LocalDateTime before, final LocalDateTime after, final Paging pagingInstruction) {
-		final Integer secondsBefore = StravaDateUtils.secondsSinceUnixEpoch(before);
-		final Integer secondsAfter = StravaDateUtils.secondsSinceUnixEpoch(after);
+		final Long secondsBefore = StravaDateUtils.secondsSinceUnixEpoch(before);
+		final Long secondsAfter = StravaDateUtils.secondsSinceUnixEpoch(after);
 
 		// Get the activities from Strava
 		List<StravaActivity> activities = PagingHandler.handlePaging(pagingInstruction,

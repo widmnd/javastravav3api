@@ -1782,9 +1782,12 @@ public class API {
 	 * @return Array of activities
 	 * @throws BadRequestException
 	 *             If the paging instructions are invalid
-	 * @see javastrava.api.ActivityAPI#listAuthenticatedAthleteActivities(java.lang.Integer, java.lang.Integer, java.lang.Integer, java.lang.Integer)
+	 * @see javastrava.api.ActivityAPI#listAuthenticatedAthleteActivities(java.lang.Long, java.lang.Long, java.lang.Integer, java.lang.Integer)
 	 */
-	public StravaActivity[] listAuthenticatedAthleteActivities(final Integer before, final Integer after, final Integer page, final Integer perPage) throws BadRequestException {
+	public StravaActivity[] listAuthenticatedAthleteActivities(final Long before
+															   ,
+															   final Long after
+			, final Integer page, final Integer perPage) throws BadRequestException {
 		return this.activityAPI.listAuthenticatedAthleteActivities(before, after, page, perPage);
 	}
 
@@ -1800,9 +1803,9 @@ public class API {
 	 * @return future The {@link CompletableFuture} on which to call future.complete() when the API returns
 	 * @throws BadRequestException
 	 *             If the paging instructions are invalid
-	 * @see javastrava.api.ActivityAPI#listAuthenticatedAthleteActivities(java.lang.Integer, java.lang.Integer, java.lang.Integer, java.lang.Integer, javastrava.api.async.StravaAPICallback)
+	 * @see javastrava.api.ActivityAPI#listAuthenticatedAthleteActivities(java.lang.Long, java.lang.Long, java.lang.Integer, java.lang.Integer, javastrava.api.async.StravaAPICallback)
 	 */
-	public StravaAPIFuture<StravaActivity[]> listAuthenticatedAthleteActivitiesAsync(final Integer before, final Integer after, final Integer page, final Integer perPage) throws BadRequestException {
+	public StravaAPIFuture<StravaActivity[]> listAuthenticatedAthleteActivitiesAsync(final Long before, final Long after, final Integer page, final Integer perPage) throws BadRequestException {
 		final StravaAPIFuture<StravaActivity[]> future = new StravaAPIFuture<StravaActivity[]>();
 		this.activityAPI.listAuthenticatedAthleteActivities(before, after, page, perPage, callback(future));
 		return future;

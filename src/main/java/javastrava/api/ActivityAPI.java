@@ -462,7 +462,7 @@ public interface ActivityAPI {
 	 *             If paging instructions are invalid
 	 */
 	@GET("/athlete/activities")
-	public StravaActivity[] listAuthenticatedAthleteActivities(@Query("before") final Integer before, @Query("after") final Integer after, @Query("page") final Integer page,
+	public StravaActivity[] listAuthenticatedAthleteActivities(@Query("before") final Long before, @Query("after") final Long after, @Query("page") final Integer page,
 			@Query("per_page") final Integer perPage) throws BadRequestException;
 
 	/**
@@ -482,7 +482,7 @@ public interface ActivityAPI {
 	 *             If paging instructions are invalid
 	 */
 	@GET("/athlete/activities")
-	public void listAuthenticatedAthleteActivities(@Query("before") final Integer before, @Query("after") final Integer after, @Query("page") final Integer page,
+	public void listAuthenticatedAthleteActivities(@Query("before") final Long before, @Query("after") final Long after, @Query("page") final Integer page,
 			@Query("per_page") final Integer perPage, final StravaAPICallback<StravaActivity[]> callback) throws BadRequestException;
 
 	/**
@@ -501,7 +501,7 @@ public interface ActivityAPI {
 	 *             If paging instructions are invalid
 	 */
 	@GET("/athlete/activities")
-	public Response listAuthenticatedAthleteActivitiesRaw(@Query("before") final Integer before, @Query("after") final Integer after, @Query("page") final Integer page,
+	public Response listAuthenticatedAthleteActivitiesRaw(@Query("before") final Long before, @Query("after") final Long after, @Query("page") final Integer page,
 			@Query("per_page") final Integer perPage) throws BadRequestException;
 
 	/**
