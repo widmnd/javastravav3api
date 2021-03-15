@@ -20,7 +20,7 @@ repositories {
 dependencies {
     compile "com.squareup.retrofit:retrofit:1.9.0"
     compile "org.apache.logging.log4j:log4j-core:2.14.1"
-    compile "org.apache.logging.log4j:log4j-slf4j-impl:2.8.1"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:2.14.1"
     compile "com.squareup.okhttp:okhttp:2.7.5"
     compile "com.google.code.gson:gson:2.8.0"
     compile "org.apache.commons:commons-jcs-core:2.1"
